@@ -1,4 +1,3 @@
-```markdown
 # Personal Portfolio Website
 
 ![Portfolio Website](![alt text](image.png))
@@ -44,7 +43,6 @@ Here’s an overview of the project structure:
 
 ## 🌟 Preview
 
-![Directory Structure](<path-to-your-directory-image>)
 
 ## 🚀 Getting Started
 

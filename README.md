@@ -25,8 +25,6 @@ Welcome to my personal portfolio website! This project showcases my skills and p
 Here’s an overview of the project structure:
 
 ```plaintext
-├── dist
-├── node_modules
 ├── src
 ├── .gitignore
 ├── eslint.config.js
@@ -40,9 +38,6 @@ Here’s an overview of the project structure:
 ├── tsconfig.node.json
 └── vite.config.ts
 ```
-
-## 🌟 Preview
-
 
 ## 🚀 Getting Started
 
@@ -93,13 +88,5 @@ The production files will be located in the `dist` directory.
 
 Feel free to reach out to me for collaboration or questions:
 
-- **GitHub:** [YourUsername](https://github.com/your-username)
-- **LinkedIn:** [YourLinkedInProfile](https://linkedin.com/in/your-profile)
-- **Email:** your-email@example.com
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-```
-
-Replace `<path-to-your-web-image>` and `<path-to-your-directory-image>` with the actual paths or links to your uploaded images. Let me know if you need further customization!
+- **GitHub:** [SharadS28N](https://github.com/SharadS28N)
+- **LinkedIn:** [Sharad Bhandari](https://www.linkedin.com/in/sharadb2/)

@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-![Portfolio Website](![alt text](image.png))
+![alt text](image.png)
 
 Welcome to my personal portfolio website! This project showcases my skills and projects as a web developer and student. Built with modern web technologies, the portfolio features smooth animations, interactive elements, and a responsive design.
 

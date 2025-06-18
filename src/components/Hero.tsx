@@ -34,7 +34,7 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            href="https://linkedin.com/in/sharadbhandari"
+            href="https://linkedin.com/in/sharads28n"
             target="_blank"
             rel="noopener noreferrer"
             className="text-yellow-400 hover:text-yellow-300"

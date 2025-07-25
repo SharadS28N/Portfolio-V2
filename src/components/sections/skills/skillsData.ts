@@ -5,7 +5,7 @@ interface Skill {
   name: string;
   icon: LucideIcon;
   color: string;
-  proficiency: number; // 0-100
+  docsUrl: string; // Documentation URL
 }
 
 interface SkillCategory {
@@ -21,43 +21,43 @@ export const skillCategories: SkillCategory[] = [
         name: "HTML",
         icon: Code2,
         color: "text-orange-500",
-        proficiency: 90
+        docsUrl: "https://developer.mozilla.org/en-US/docs/Web/HTML"
       },
       {
         name: "CSS",
         icon: PenTool,
         color: "text-blue-500",
-        proficiency: 85
+        docsUrl: "https://developer.mozilla.org/en-US/docs/Web/CSS"
       },
       {
         name: "JavaScript",
         icon: Code2,
         color: "text-yellow-400",
-        proficiency: 85
+        docsUrl: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
       },
       {
         name: "TypeScript",
         icon: Code2,
         color: "text-blue-600",
-        proficiency: 80
+        docsUrl: "https://www.typescriptlang.org/docs/"
       },
       {
         name: "React",
         icon: Globe,
         color: "text-cyan-400",
-        proficiency: 85
+        docsUrl: "https://react.dev/"
       },
       {
         name: "Tailwind",
         icon: PenTool,
         color: "text-cyan-500",
-        proficiency: 90
+        docsUrl: "https://tailwindcss.com/docs"
       },
       {
         name: "Framer Motion",
         icon: Layers,
         color: "text-purple-500",
-        proficiency: 75
+        docsUrl: "https://www.framer.com/motion/"
       },
     ]
   },
@@ -68,25 +68,25 @@ export const skillCategories: SkillCategory[] = [
         name: "Node.js",
         icon: Server,
         color: "text-green-500",
-        proficiency: 80
+        docsUrl: "https://nodejs.org/en/docs/"
       },
       {
         name: "Express",
         icon: Server,
         color: "text-gray-400",
-        proficiency: 75
+        docsUrl: "https://expressjs.com/"
       },
       {
         name: "MongoDB",
         icon: Database,
         color: "text-green-600",
-        proficiency: 70
+        docsUrl: "https://docs.mongodb.com/"
       },
       {
         name: "SQL",
         icon: Database,
         color: "text-blue-400",
-        proficiency: 65
+        docsUrl: "https://www.w3schools.com/sql/"
       },
     ]
   },
@@ -97,31 +97,31 @@ export const skillCategories: SkillCategory[] = [
         name: "Git",
         icon: GitBranch,
         color: "text-orange-600",
-        proficiency: 85
+        docsUrl: "https://git-scm.com/doc"
       },
       {
         name: "Figma",
         icon: Figma,
         color: "text-purple-400",
-        proficiency: 70
+        docsUrl: "https://help.figma.com/"
       },
       {
         name: "Responsive Design",
         icon: Smartphone,
         color: "text-blue-500",
-        proficiency: 90
+        docsUrl: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
       },
       {
         name: "Three.js",
         icon: Cpu,
         color: "text-gray-300",
-        proficiency: 60
+        docsUrl: "https://threejs.org/docs/"
       },
       {
         name: "GSAP",
         icon: Layers,
         color: "text-green-400",
-        proficiency: 65
+        docsUrl: "https://greensock.com/docs/"
       },
     ]
   }

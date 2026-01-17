@@ -211,9 +211,9 @@ MIT License - feel free to use this as inspiration for your own portfolio!
 ## Contact
 
 **Sharad Bhandari**
-- GitHub: [@sharad-bhandari](https://github.com/sharad-bhandari)
-- LinkedIn: [Sharad Bhandari](https://linkedin.com/in/sharad-bhandari)
-- Email: contact@sharad.dev
+- GitHub: [@sharad-bhandari](https://github.com/SharadS28N)
+- LinkedIn: [Sharad Bhandari](https://linkedin.com/in/SharadS28N)
+- Email: sharad.bhandari222@gmail.com
 
 ---
 

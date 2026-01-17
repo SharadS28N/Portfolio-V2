@@ -118,7 +118,7 @@ export function ContactForm() {
             className={`w-full rounded-lg border bg-background px-4 py-3 text-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary ${
               errors.name ? "border-destructive" : "border-border"
             }`}
-            placeholder="John Doe"
+            placeholder="Full Name"
           />
           {errors.name && (
             <motion.p
@@ -145,7 +145,7 @@ export function ContactForm() {
             className={`w-full rounded-lg border bg-background px-4 py-3 text-foreground outline-none transition-all duration-300 focus:border-primary focus:ring-1 focus:ring-primary ${
               errors.email ? "border-destructive" : "border-border"
             }`}
-            placeholder="john@example.com"
+            placeholder="example@example.com"
           />
           {errors.email && (
             <motion.p

@@ -5,7 +5,9 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { AnimatedLine } from "@/components/animated-line"
 
-const reelImages = ["/images/image1.jpg", "/images/image2.jpg", "/images/image3.jpg", "/images/image4.jpg", "/images/image5.jpg", "/images/image6.jpg", "/images/image7.jpg", "/images/image8.jpg"]
+const reelImages = ["/images/image1.jpg", "/images/image2.jpg", "/images/image3.jpg", "/images/image4.jpg", 
+  "/images/image5.jpg", "/images/image6.jpg", "/images/image7.jpg", "/images/image8.jpg", "/images/image9.jpg", 
+  "/images/image10.jpg", "/images/image11.jpg"]
 
 export function MomentsParallax() {
   const containerRef = useRef<HTMLDivElement>(null)

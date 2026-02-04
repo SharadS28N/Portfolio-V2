@@ -17,7 +17,7 @@ const footerLinks = [
 const socialLinks = [
   { href: "https://github.com/sharads28n", icon: Github, label: "GitHub" },
   { href: "https://www.linkedin.com/in/SharadS28N/", icon: Linkedin, label: "LinkedIn" },
-  { href: "mailto:contact@sharadbhandari.com", icon: Mail, label: "Email" },
+  { href: "mailto:sharad.bhandari222@gmail.com", icon: Mail, label: "Email" },
 ]
 
 const devMessages = [

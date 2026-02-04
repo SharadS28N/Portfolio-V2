@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main>
+    <main id="main-content">
       <AboutHero />
       <AboutStory />
       <AboutPhilosophy />

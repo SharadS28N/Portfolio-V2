@@ -64,6 +64,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${syne.variable} ${playfair.variable} ${jetbrains.variable} font-sans antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[60] focus:rounded-full focus:bg-white/90 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-black focus:shadow-lg focus:backdrop-blur"
+        >
+          Skip to main content
+        </a>
         <RunwayModeProvider>
           <Preloader />
           <SmoothScroll>

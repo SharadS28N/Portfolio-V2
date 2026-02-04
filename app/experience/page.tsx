@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ExperiencePage() {
   return (
-    <main>
+    <main id="main-content">
       <ExperienceHero />
       <ExperienceTimeline />
       <Footer />

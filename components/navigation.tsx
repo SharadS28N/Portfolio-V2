@@ -89,7 +89,11 @@ export function Navigation() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative z-50">
+          <Link
+            href="/"
+            className="relative z-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            aria-label="Go to homepage"
+          >
             <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
               <Image
                 src="/logo-transparent.png"
@@ -103,9 +107,14 @@ export function Navigation() {
           </Link>
 
           {/* Desktop navigation */}
-          <nav className="hidden items-center gap-6 lg:flex xl:gap-8">
+          <nav className="hidden items-center gap-6 lg:flex xl:gap-8" aria-label="Primary">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="group relative">
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={pathname === item.href ? "page" : undefined}
+                className="group relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
                 <span
                   className={`text-sm tracking-wide transition-colors duration-300 ${
                     pathname === item.href
@@ -130,11 +139,12 @@ export function Navigation() {
             {/* Runway Mode Toggle */}
             <button
               onClick={toggleRunwayMode}
+              aria-pressed={isRunwayMode}
               className={`ml-2 rounded-full border px-3 py-1 text-xs tracking-wider transition-all duration-300 xl:ml-4 ${
                 isRunwayMode
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border text-muted-foreground hover:border-primary hover:text-primary"
-              }`}
+              } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
             >
               RUNWAY
             </button>
@@ -143,9 +153,10 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+            className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
+            aria-controls="mobile-nav"
           >
             <motion.span
               className="block h-px w-6 bg-foreground"
@@ -170,6 +181,7 @@ export function Navigation() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-nav"
             className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-background lg:hidden"
             initial={{ opacity: 0, clipPath: "circle(0% at calc(100% - 2rem) 2rem)" }}
             animate={{ opacity: 1, clipPath: "circle(150% at calc(100% - 2rem) 2rem)" }}
@@ -185,7 +197,7 @@ export function Navigation() {
               />
             </div>
 
-            <nav className="relative flex flex-col items-center gap-6 sm:gap-8">
+            <nav className="relative flex flex-col items-center gap-6 sm:gap-8" aria-label="Mobile">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -196,9 +208,10 @@ export function Navigation() {
                 >
                   <Link
                     href={item.href}
+                    aria-current={pathname === item.href ? "page" : undefined}
                     className={`block font-serif text-3xl transition-colors duration-300 sm:text-4xl ${
                       pathname === item.href ? "text-primary" : "text-muted-foreground hover:text-foreground"
-                    }`}
+                    } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
                   >
                     {item.label}
                   </Link>
@@ -208,6 +221,7 @@ export function Navigation() {
               {/* Runway Mode Toggle */}
               <motion.button
                 onClick={toggleRunwayMode}
+                aria-pressed={isRunwayMode}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 30 }}
@@ -216,7 +230,7 @@ export function Navigation() {
                   isRunwayMode
                     ? "border-primary bg-primary text-primary-foreground"
                     : "border-border text-muted-foreground hover:border-primary hover:text-primary"
-                }`}
+                } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
               >
                 RUNWAY MODE
               </motion.button>

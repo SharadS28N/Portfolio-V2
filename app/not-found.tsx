@@ -55,7 +55,11 @@ export default function NotFound() {
   }
 
   return (
-    <main ref={containerRef} className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
+    <main
+      id="main-content"
+      ref={containerRef}
+      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden"
+    >
       {/* Animated background gradient that follows mouse */}
       <motion.div
         className="pointer-events-none absolute h-[600px] w-[600px] rounded-full bg-secondary/10 blur-3xl"

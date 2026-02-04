@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main>
+    <main id="main-content">
       <ProjectsHero />
       <ProjectsGrid />
       <Footer />

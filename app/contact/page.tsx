@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main>
+    <main id="main-content">
       <ContactHero />
       <div className="relative bg-card py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">

@@ -72,10 +72,19 @@ export function HeroSection() {
   return (
     <section ref={containerRef} className="relative min-h-[100svh] overflow-hidden">
       {/* Background gradient - removed moving squares */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-background via-background to-card"
+        aria-hidden="true"
+      />
 
-      <div className="absolute right-0 top-1/4 h-[300px] w-[300px] rounded-full bg-secondary/10 blur-3xl md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]" />
-      <div className="absolute -left-10 bottom-1/4 h-[200px] w-[200px] rounded-full bg-primary/5 blur-3xl md:-left-20 md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px]" />
+      <div
+        className="absolute right-0 top-1/4 h-[300px] w-[300px] rounded-full bg-secondary/10 blur-3xl md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute -left-10 bottom-1/4 h-[200px] w-[200px] rounded-full bg-primary/5 blur-3xl md:-left-20 md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px]"
+        aria-hidden="true"
+      />
 
       {/* Main content */}
       <motion.div
@@ -201,6 +210,7 @@ export function HeroSection() {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             className="flex flex-col items-center gap-2 text-muted-foreground"
+            aria-hidden="true"
           >
             <span className="font-mono text-xs tracking-wider">SCROLL</span>
             <ArrowDown className="h-4 w-4" />
@@ -215,6 +225,9 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Easter egg unlocked"
           >
             <div className="px-4 text-center">
               <motion.div
@@ -240,6 +253,9 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-label="AI easter egg unlocked"
           >
             <div className="px-4 text-center">
               <motion.div

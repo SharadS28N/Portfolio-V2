@@ -35,12 +35,11 @@ export function MomentsParallax() {
           MOMENTS REEL
         </motion.span>
 
-        <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">Side-Scroll Vertical Gallery</h2>
+        <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">My Moment Gallery</h2>
         <AnimatedLine className="mt-6 w-24" delay={0.2} />
 
         <p className="mt-4 max-w-2xl text-sm text-muted-foreground sm:text-base">
-          Smooth, horizontally scrolling reel with vertical, responsive frames. Add at least five photos and an intro
-          card before the gallery.
+          Smooth, horizontally scrolling reel with vertical, responsive frames.
         </p>
       </div>
 
@@ -69,7 +68,7 @@ export function MomentsParallax() {
                   <div className="font-mono text-xs tracking-wider text-secondary">INTRO</div>
                   <div className="mt-2 font-serif text-2xl font-bold text-foreground sm:text-3xl">Personal Highlights</div>
                   <p className="mt-3 max-w-[22ch] text-sm text-muted-foreground sm:text-base">
-                    Side-scroll to explore moments like attending TEDx and other events.
+                    Side-scroll to explore some of my personal best moments.
                   </p>
                 </div>
               </motion.div>

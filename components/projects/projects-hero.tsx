@@ -16,11 +16,14 @@ export function ProjectsHero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-24">
+    <section ref={containerRef} className="relative min-h-screen overflow-hidden flex items-center">
       {/* Background elements */}
       <motion.div
         className="absolute left-0 top-1/3 h-[400px] w-[400px] rounded-full bg-secondary/10 blur-3xl"
-        style={{ y, opacity }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        style={{ y }}
       />
 
       <motion.div

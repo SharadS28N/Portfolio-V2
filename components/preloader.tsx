@@ -3,11 +3,28 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
+const greetings = [
+  "Hello",
+  "नमस्ते",
+  "你好",
+  "Bonjour",
+  "Hola",
+  "こんにちは",
+  "안녕하세요",
+  "مرحبا",
+]
+
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
+  const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0)
 
   useEffect(() => {
+    // Cycle through greetings - 500ms per greeting so users can read each one
+    const greetingInterval = setInterval(() => {
+      setCurrentGreetingIndex((prev) => (prev + 1) % greetings.length)
+    }, 500)
+
     // Simulate loading progress
     const interval = setInterval(() => {
       setProgress((prev) => {
@@ -16,13 +33,13 @@ export function Preloader() {
           return 100
         }
         // Variable speed for more realistic feel
-        const increment = Math.random() * 15 + 5
+        const increment = Math.random() * 10 + 3
         return Math.min(prev + increment, 100)
       })
-    }, 100)
+    }, 150)
 
-    // Minimum display time + wait for document ready
-    const minDisplayTime = new Promise((resolve) => setTimeout(resolve, 2000))
+    // Minimum display time of 4 seconds to show all greetings + wait for document ready
+    const minDisplayTime = new Promise((resolve) => setTimeout(resolve, 4000))
     const documentReady = new Promise((resolve) => {
       if (document.readyState === "complete") {
         resolve(true)
@@ -36,7 +53,10 @@ export function Preloader() {
       setTimeout(() => setIsLoading(false), 500)
     })
 
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+      clearInterval(greetingInterval)
+    }
   }, [])
 
   return (
@@ -78,46 +98,25 @@ export function Preloader() {
 
           {/* Main content */}
           <div className="relative z-10 flex flex-col items-center">
-            {/* Animated logo */}
-            <motion.div className="relative mb-12">
-              {/* Orbiting circles */}
-              <motion.div
-                className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-border/30 md:h-40 md:w-40"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-              />
-              <motion.div
-                className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full border border-secondary/40 md:h-32 md:w-32"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-              />
-              <motion.div
-                className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/20 md:h-24 md:w-24"
-                animate={{
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-              />
-
-              {/* Logo letters */}
-              <div className="relative flex items-center justify-center">
+            {/* Multilingual greeting text */}
+            <motion.div
+              className="mb-8 h-20 flex items-center justify-center overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <AnimatePresence mode="wait">
                 <motion.span
-                  className="font-serif text-5xl font-bold text-primary md:text-6xl"
-                  initial={{ opacity: 0, y: 20 }}
+                  key={currentGreetingIndex}
+                  initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.8 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.3 }}
+                  className="block font-serif text-5xl font-bold text-primary md:text-6xl lg:text-7xl"
                 >
-                  S
+                  {greetings[currentGreetingIndex]}
                 </motion.span>
-                <motion.span
-                  className="font-serif text-5xl font-bold text-foreground md:text-6xl"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.8 }}
-                >
-                  B
-                </motion.span>
-              </div>
+              </AnimatePresence>
             </motion.div>
 
             {/* Progress bar */}
@@ -145,7 +144,7 @@ export function Preloader() {
 
             {/* Tagline */}
             <motion.p
-              className="mt-8 font-serif text-sm italic text-muted-foreground md:text-base"
+              className="mt-8 font-serif text-base italic text-muted-foreground md:text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
@@ -167,3 +166,5 @@ export function Preloader() {
     </AnimatePresence>
   )
 }
+
+

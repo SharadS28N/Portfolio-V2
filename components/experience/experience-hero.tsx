@@ -16,11 +16,14 @@ export function ExperienceHero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-24">
+    <section ref={containerRef} className="relative min-h-screen overflow-hidden flex items-center">
       {/* Background elements */}
       <motion.div
         className="absolute right-0 top-1/4 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl"
-        style={{ y, opacity }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        style={{ y }}
       />
 
       <motion.div

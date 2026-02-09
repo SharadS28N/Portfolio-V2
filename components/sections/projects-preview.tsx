@@ -50,7 +50,7 @@ export function ProjectsPreview() {
     data: repos,
     error,
     isLoading,
-  } = useSWR<GitHubRepo[]>("https://api.github.com/users/sharads28n/repos?sort=updated&per_page=4", fetcher, {
+  } = useSWR<GitHubRepo[]>("https://api.github.com/users/SharadS28N/repos?sort=updated&per_page=4", fetcher, {
     revalidateOnFocus: false,
   })
 

@@ -11,17 +11,17 @@ const storyBlocks = [
   {
     title: "The Beginning",
     content:
-      "My journey started with a curiosity about how things work on the internet. What began as simple HTML pages quickly evolved into a passion for creating immersive digital experiences. Now, at Softwarica College of IT & E-Commerce, I'm expanding into the world of AI.",
+      "My coding journey started in 2017 as a curious young learner exploring QBasic and VB Script in Visual Studio. Though too young to fully grasp it, my fascination with code only grew. By 2018, I had transitioned to HTML, CSS, and JavaScript, building my first websites and discovering the magic of frontend development.",
   },
   {
     title: "The Craft",
     content:
-      "I specialize in building modern web applications using React, Next.js, and the MERN stack. My current studies in AI are teaching me to integrate machine learning into these applications, creating truly intelligent user experiences.",
+      "During the COVID pandemic in 2019-2020, I turned lockdown into opportunity. I mastered React.js, deepened my JavaScript skills, and explored networking through countless YouTube tutorials. From 2021 onwards, I built real projects—Aleo (AI voice assistant), CVly (CS50x final project), SecScanner, NetGuard, and InvestIQ—using the MERN stack, Firebase, and modern web technologies.",
   },
   {
     title: "The Philosophy",
     content:
-      "I believe the future of development lies at the intersection of beautiful design and artificial intelligence. The best digital experiences feel natural, intuitive, and almost magical—powered by smart algorithms working invisibly behind the scenes.",
+      "Now studying BSc (Hons) Computing with AI at Softwarica College / Coventry University, I believe the future lies at the intersection of beautiful design and artificial intelligence. Working at Nexus Event & IT Solutions, I continue building intelligent digital experiences where modern web technologies meet AI. The journey that started with QBasic continues forward.",
   },
 ]
 

@@ -4,6 +4,25 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { TextReveal } from "@/components/text-reveal"
 import { useRunwayMode } from "@/components/runway-mode-provider"
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiPython,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
+  SiFirebase,
+  SiGit,
+  SiDocker,
+  SiDjango,
+  SiFlask,
+  SiFramer,
+  SiFigma,
+  SiThreedotjs,
+} from "react-icons/si"
 
 const skills = [
   { name: "React / Next.js", level: 95 },
@@ -15,21 +34,23 @@ const skills = [
 ]
 
 const technologies = [
-  "JavaScript",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "MongoDB",
-  "Express",
-  "Tailwind CSS",
-  "GSAP",
-  "Framer Motion",
-  "Three.js",
-  "Git",
-  "REST APIs",
-  "GraphQL",
-  "Figma",
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "Express", icon: SiExpress, color: "#ffffff" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "Framer Motion", icon: SiFramer, color: "#0055FF" },
+  { name: "Three.js", icon: SiThreedotjs, color: "#ffffff" },
+  { name: "Git", icon: SiGit, color: "#F05032" },
+  { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+  { name: "Python", icon: SiPython, color: "#3776AB" },
+  { name: "Django", icon: SiDjango, color: "#092E20" },
+  { name: "Flask", icon: SiFlask, color: "#ffffff" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
 ]
 
 export function SkillsSection() {
@@ -89,7 +110,7 @@ export function SkillsSection() {
             ))}
           </div>
 
-          {/* Technology tags */}
+          {/* Technology tags with icons */}
           <div>
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
@@ -103,15 +124,16 @@ export function SkillsSection() {
             <div className="flex flex-wrap gap-2 sm:gap-3">
               {technologies.map((tech, index) => (
                 <motion.span
-                  key={tech}
+                  key={tech.name}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.05 + 0.5 }}
                   whileHover={{ scale: 1.05, backgroundColor: "rgba(90, 71, 58, 0.3)" }}
-                  className="cursor-default rounded-full border border-border px-3 py-1.5 text-xs text-foreground transition-colors duration-300 sm:px-4 sm:py-2 sm:text-sm"
+                  className="flex cursor-default items-center gap-2 rounded-full border border-border px-3 py-1.5 text-xs text-foreground transition-colors duration-300 sm:px-4 sm:py-2 sm:text-sm"
                   data-cursor="hover"
                 >
-                  {tech}
+                  <tech.icon className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: tech.color }} />
+                  {tech.name}
                 </motion.span>
               ))}
             </div>
@@ -121,3 +143,4 @@ export function SkillsSection() {
     </section>
   )
 }
+

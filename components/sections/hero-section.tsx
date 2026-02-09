@@ -142,8 +142,8 @@ export function HeroSection() {
           >
             <AnimatedLine className="mb-4 w-16 sm:mb-6 sm:w-24" delay={1} />
             <p className="max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg lg:max-w-xl lg:text-xl">
-              Creative Full-Stack Developer & AI Enthusiast at{" "}
-              <span className="text-primary">Softwarica College of IT</span>. Building intelligent digital
+              Creative Full-Stack Developer & AI Enthusiast pursuing{" "}
+              <span className="text-primary">BSc (Hons) Computing with AI</span> at Softwarica College / Coventry University. Building intelligent digital
               experiences where modern web technologies meet artificial intelligence.
             </p>
           </motion.div>
@@ -189,7 +189,7 @@ export function HeroSection() {
             className="mt-10 flex items-center gap-4 sm:mt-12 sm:gap-6 md:mt-16"
           >
             <a
-              href="https://github.com/sharads28n"
+              href="https://github.com/SharadS28N"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-primary"

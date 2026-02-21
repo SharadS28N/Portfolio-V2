@@ -118,7 +118,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Name */}
-          <div className="mb-4 sm:mb-6">
+          <h1 className="mb-4 sm:mb-6">
             <TextReveal
               className="font-serif text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
               delay={0.3}
@@ -131,7 +131,7 @@ export function HeroSection() {
             >
               Bhandari
             </TextReveal>
-          </div>
+          </h1>
 
           {/* Description */}
           <motion.div

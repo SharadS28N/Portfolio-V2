@@ -39,12 +39,11 @@ export function AboutHero() {
           ABOUT ME
         </motion.span>
 
-        <TextReveal
-          className="mb-8 max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl"
-          delay={0.3}
-        >
-          I craft digital experiences that blend aesthetics with functionality.
-        </TextReveal>
+        <h1 className="mb-8 max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
+          <TextReveal delay={0.3}>
+            I craft digital experiences that blend aesthetics with functionality.
+          </TextReveal>
+        </h1>
 
         <AnimatedLine className="mb-8 w-32" delay={0.8} />
 

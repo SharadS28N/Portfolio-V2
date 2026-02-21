@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Experience | Sharad Bhandari",
   description:
     "Explore the professional journey and experience of Sharad Bhandari - A Creative Frontend / Full-Stack Developer.",
+  alternates: {
+    canonical: "/experience",
+  },
 }
 
 export default function ExperiencePage() {

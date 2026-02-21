@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Projects | Sharad Bhandari",
   description:
     "Explore the portfolio of Sharad Bhandari - A collection of web development projects showcasing modern technologies and creative solutions.",
+  alternates: {
+    canonical: "/projects",
+  },
 }
 
 export default function ProjectsPage() {

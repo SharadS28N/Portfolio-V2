@@ -7,6 +7,7 @@ import { MagneticButton } from "@/components/magnetic-button"
 import { AnimatedLine } from "@/components/animated-line"
 import { useRunwayMode } from "@/components/runway-mode-provider"
 import Link from "next/link"
+import Image from "next/image"
 import { Brain } from "lucide-react"
 
 export function AboutPreview() {
@@ -89,9 +90,11 @@ export function AboutPreview() {
                       animate={isRunwayMode ? { scale: [1, 1.1, 1] } : {}}
                       transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                     />
-                    <img
+                    <Image
                       src="/profile-pic.jpg"
                       alt="Profile"
+                      width={192}
+                      height={192}
                       className="absolute h-24 w-24 rounded-full object-cover sm:h-32 sm:w-32 lg:h-48 lg:w-48"
                     />
                   </div>

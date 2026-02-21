@@ -39,12 +39,11 @@ export function ContactHero() {
           GET IN TOUCH
         </motion.span>
 
-        <TextReveal
-          className="mb-8 max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl"
-          delay={0.3}
-        >
-          Let&apos;s create something extraordinary together.
-        </TextReveal>
+        <h1 className="mb-8 max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
+          <TextReveal delay={0.3}>
+            Let&apos;s create something extraordinary together.
+          </TextReveal>
+        </h1>
 
         <AnimatedLine className="mb-8 w-32" delay={0.8} />
 

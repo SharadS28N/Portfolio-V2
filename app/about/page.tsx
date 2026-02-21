@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "About | Sharad Bhandari",
   description:
     "Learn more about Sharad Bhandari - a Creative Frontend / Full-Stack Developer passionate about crafting premium digital experiences.",
+  alternates: {
+    canonical: "/about",
+  },
 }
 
 export default function AboutPage() {

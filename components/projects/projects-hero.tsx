@@ -39,12 +39,11 @@ export function ProjectsHero() {
           PORTFOLIO
         </motion.span>
 
-        <TextReveal
-          className="mb-8 max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl"
-          delay={0.3}
-        >
-          A curated collection of my finest work.
-        </TextReveal>
+        <h1 className="mb-8 max-w-4xl font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
+          <TextReveal delay={0.3}>
+            A curated collection of my finest work.
+          </TextReveal>
+        </h1>
 
         <AnimatedLine className="mb-8 w-32" delay={0.8} />
 

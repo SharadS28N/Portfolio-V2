@@ -17,11 +17,17 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" })
 
 export const metadata: Metadata = {
-  title: "Sharad Bhandari | Full-Stack Developer & AI Enthusiast",
+  metadataBase: new URL("https://sharadb.com.np"),
+  title: {
+    default: "Sharad | Full Stack Developer in Nepal & AI Expert",
+    template: "%s | Sharad",
+  },
   description:
-    "Portfolio of Sharad Bhandari - A Full-Stack Developer & AI Enthusiast at Softwarica College, crafting intelligent digital experiences with modern web technologies and artificial intelligence.",
+    "Hire Sharad, a modern Full-Stack Developer in Nepal specializing in Next.js, React, and Artificial Intelligence. Building fast, intelligent digital experiences.",
   keywords: [
     "Full-Stack Developer",
+    "Full Stack Developer Nepal",
+    "Sharad developer",
     "AI Developer",
     "React",
     "Next.js",
@@ -38,15 +44,31 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Sharad Bhandari | Full-Stack Developer & AI Enthusiast",
-    description: "Crafting intelligent digital experiences where web technologies meet AI.",
+    title: "Sharad | Full Stack Developer in Nepal & AI Expert",
+    description: "Hire Sharad, a modern Full-Stack Developer in Nepal specializing in Next.js, React, and Artificial Intelligence.",
+    url: "https://sharadb.com.np",
+    siteName: "Sharad Bhandari",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/logo-transparent.png",
+        width: 1200,
+        height: 630,
+        alt: "Sharad Bhandari - Full-Stack Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sharad Bhandari | Full-Stack Developer & AI Enthusiast",
-    description: "Crafting intelligent digital experiences where web technologies meet AI.",
+    title: "Sharad | Full Stack Developer in Nepal & AI Expert",
+    description: "Hire Sharad, a modern Full-Stack Developer in Nepal specializing in Next.js, React, and Artificial Intelligence.",
+    creator: "@sharadb",
+    images: ["/logo-transparent.png"],
   }
 }
 
@@ -61,8 +83,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Sharad Bhandari",
+    alternateName: ["Sharad", "Sharad B", "SharadS28N"],
+    jobTitle: "Full Stack Developer",
+    url: "https://sharadb.com.np",
+    sameAs: [
+      "https://github.com/SharadS28N",
+      "https://www.linkedin.com/in/SharadS28N/"
+    ],
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: ["Softwarica College of IT & E-Commerce", "Coventry University"]
+    },
+    knowsAbout: ["Full Stack Web Development", "React.js", "Next.js", "Artificial Intelligence", "Machine Learning"]
+  }
+
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${syne.variable} ${playfair.variable} ${jetbrains.variable} font-sans antialiased`}>
         <a
           href="#main-content"

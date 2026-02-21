@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Contact | Sharad Bhandari",
   description:
     "Get in touch with Sharad Bhandari for collaboration, project inquiries, or just to say hello. Let's create something amazing together.",
+  alternates: {
+    canonical: "/contact",
+  },
 }
 
 export default function ContactPage() {

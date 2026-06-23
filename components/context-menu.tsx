@@ -5,7 +5,8 @@ import type React from "react"
 import { useState, useEffect, useCallback, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useRunwayMode } from "./runway-mode-provider"
-import { RefreshCw, Home, User, FolderKanban, Mail, Zap, Github, Copy, ArrowUp, Music, Sparkles } from "lucide-react"
+import { RefreshCw, Home, User, FolderKanban, Mail, Zap, Copy, ArrowUp, Music, Sparkles } from "lucide-react"
+import { FaGithub } from "react-icons/fa6"
 import { useRouter, usePathname } from "next/navigation"
 
 interface MenuItem {
@@ -192,7 +193,7 @@ export function ContextMenu() {
     },
     {
       label: "GitHub",
-      icon: <Github size={14} />,
+      icon: <FaGithub size={14} />,
       action: () => window.open("https://github.com/sharad-bhandari", "_blank"),
       divider: true,
     },

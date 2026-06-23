@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Star, GitFork, Code } from "lucide-react"
+import { ExternalLink, Star, GitFork, Code } from "lucide-react"
+import { FaGithub } from "react-icons/fa6"
 import Image from "next/image"
 import type { Project } from "@/hooks/useGitHubProjects"
 import { useRunwayMode } from "@/components/runway-mode-provider"
@@ -132,7 +133,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             className="flex h-12 w-12 items-center justify-center rounded-full bg-foreground text-background transition-transform hover:scale-110"
                             title="View Source"
                         >
-                            <Github className="h-5 w-5" />
+                            <FaGithub className="h-5 w-5" />
                         </a>
                         {project.demo && (
                             <a

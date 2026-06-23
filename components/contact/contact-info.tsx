@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, MapPin, Github, Linkedin, Clock } from "lucide-react"
+import { Mail, MapPin, Clock } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa6"
 import { AnimatedLine } from "@/components/animated-line"
 
 const contactDetails = [
@@ -27,13 +28,13 @@ const contactDetails = [
 
 const socialLinks = [
   {
-    icon: Github,
+    icon: FaGithub,
     label: "GitHub",
     href: "https://github.com/sharads28n",
     username: "@sharads28n",
   },
   {
-    icon: Linkedin,
+    icon: FaLinkedin,
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/SharadS28N/",
     username: "Sharad Bhandari",

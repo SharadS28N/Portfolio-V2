@@ -7,7 +7,8 @@ import { MagneticButton } from "@/components/magnetic-button"
 import { AnimatedLine } from "@/components/animated-line"
 import { useRunwayMode } from "@/components/runway-mode-provider"
 import Link from "next/link"
-import { ArrowDown, Github, Linkedin } from "lucide-react"
+import { ArrowDown } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa6"
 import Spline from "@splinetool/react-spline"
 
 export function HeroSection() {
@@ -195,7 +196,7 @@ export function HeroSection() {
               className="text-muted-foreground transition-colors hover:text-primary"
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5" />
+              <FaGithub className="h-5 w-5" />
             </a>
             <a
               href="https://www.linkedin.com/in/SharadS28N/"
@@ -204,7 +205,7 @@ export function HeroSection() {
               className="text-muted-foreground transition-colors hover:text-primary"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5" />
+              <FaLinkedin className="h-5 w-5" />
             </a>
           </motion.div>
         </div>

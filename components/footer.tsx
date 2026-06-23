@@ -4,7 +4,8 @@ import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-import { Github, Linkedin, Mail, Coffee, Terminal, Cpu } from "lucide-react"
+import { Mail, Coffee, Terminal, Cpu } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa6"
 
 const footerLinks = [
   { href: "/", label: "Home" },
@@ -15,8 +16,8 @@ const footerLinks = [
 ]
 
 const socialLinks = [
-  { href: "https://github.com/sharads28n", icon: Github, label: "GitHub" },
-  { href: "https://www.linkedin.com/in/SharadS28N/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://github.com/sharads28n", icon: FaGithub, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/SharadS28N/", icon: FaLinkedin, label: "LinkedIn" },
   { href: "mailto:sharad.bhandari222@gmail.com", icon: Mail, label: "Email" },
 ]
 

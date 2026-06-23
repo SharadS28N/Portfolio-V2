@@ -2,36 +2,36 @@
 
 import React, { useEffect, useRef } from "react";
 
-declare global {
-  interface Window {
-    QRCode: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     QRCode: any;
+//   }
+// }
 
 export default function ConnectPage() {
   const qrRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && qrRef.current) {
-      const script = document.createElement("script");
-      script.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
-      script.onload = () => {
-        if (window.QRCode) {
-          new window.QRCode(qrRef.current, {
-            text: "https://card.sharadb.com.np",
-            width: 180,
-            height: 180
-          });
-        }
-      };
-      document.body.appendChild(script);
-      return () => {
-        if (document.body.contains(script)) {
-          document.body.removeChild(script);
-        }
-      };
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined" && qrRef.current) {
+  //     const script = document.createElement("script");
+  //     script.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
+  //     script.onload = () => {
+  //       if (window.QRCode) {
+  //         new window.QRCode(qrRef.current, {
+  //           text: "https://card.sharadb.com.np",
+  //           width: 180,
+  //           height: 180
+  //         });
+  //       }
+  //     };
+  //     document.body.appendChild(script);
+  //     return () => {
+  //       if (document.body.contains(script)) {
+  //         document.body.removeChild(script);
+  //       }
+  //     };
+  //   }
+  // }, []);
 
   const saveContact = () => {
     const contact = `BEGIN:VCARD
@@ -280,11 +280,11 @@ END:VCARD`;
             </svg>
             Email
           </a>
-          <h3>Scan To Connect</h3>
+          {/* <h3>Scan To Connect</h3>
           <div className="qr-box">
             <div id="qrcode" ref={qrRef}></div>
-          </div>
-          <div className="nfc-section">
+          </div> */}
+          {/* <div className="nfc-section">
             <h3>NFC Card Preview</h3>
             <div className="nfc-card">
               <div className="nfc-name">
@@ -294,7 +294,7 @@ END:VCARD`;
                 Tap To Connect
               </div>
             </div>
-          </div>
+          </div> */}
           <footer>
             © Sharad Bhandari
           </footer>
